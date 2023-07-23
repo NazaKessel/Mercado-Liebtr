@@ -1,0 +1,357 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+ }
+ body{
+     width: 100%;
+     background: rgb(235, 235, 235);
+     font-family: 'Roboto';
+     font-size: 12px;
+ }
+ main{
+     width: 90%;
+     margin: 0 auto;
+ }
+ /* header */
+ header{
+     width: 100%;
+     height: 100px;
+     background: rgb(255, 241, 89);
+ 
+ }
+ .conte1{
+     top: 10px;
+     display: flex;
+     position: relative;
+     width: 100%;
+     height: 50%;
+     justify-content: center;
+ }
+ .conte1 p{
+     padding-left: 50px;
+     padding-top:10px;
+     font-size: 16px;
+ }
+ .conte1 img{
+     height: 40px;
+ }
+ .conte1 nav input{
+     margin-left: 20px;
+     padding-left:10px;
+     width: 600px;
+     height: 40px;
+     border: none;
+     box-shadow: 1px 1px 3px 0 #00000048;
+     border-radius: 2px;
+ }
+ .conte1 nav button{
+     width: 30px;
+     height: 40px;
+     background: #fff;
+     border: none;
+ }
+ .conte2{
+     width: 100%;
+     height: 50%;
+     position: relative;
+     top: 30px;
+     left: 20px;
+     display: grid;
+     grid-template-columns: 50% 50%;
+ }
+ .conte2 a{
+     text-decoration: none;
+     color: rgba(0, 0, 0, 0.671);
+     margin-left: 20px;
+ }
+ .conte2 .a{
+     text-decoration: none;
+     color: rgba(0, 0, 0, 0.671);
+     margin-left: 20px;
+     float: right;
+     padding-right: 50px;
+     display: flex;
+     text-align: center;
+ }
+ 
+ /* carrusel */
+ .carrusel{
+     width: 100%;
+     height: 350px;
+     overflow: hidden;
+     justify-content: center;
+ }
+ ul{
+     width: 400%;
+     display: flex;
+     animation: slider 20s infinite alternate linear;
+ }
+ .carrusel li{
+     width: 100%;
+     list-style: none;
+ }
+ .carrusel img{
+     width: 100%;
+     height: 100%;
+ }
+ @keyframes slider{
+     0%{margin-left: 0;}
+     20%{margin-left: 0;}
+ 
+     25%{margin-left: -100%;}
+     45%{margin-left: -100%;}
+ 
+     50%{margin-left: -200%;}
+     70%{margin-left: -200%;}
+ 
+     75%{margin-left: -300%;}
+     100%{margin-left: -300%;}
+ }
+ 
+ 
+ /* ofertas */
+ .ofertas{
+     width: 100%;
+     padding: 10px;
+     display: flex;
+     justify-content: center;
+     box-sizing: border-box;
+     margin-bottom: 20px;
+ }
+ .h1-oferta{
+     font-size: 24px;
+     color: #666;
+     padding-bottom: 10px;
+     padding-top: 10px;
+     text-align: center;
+ }
+ .card{
+     width: 300px;
+     height: 400px;
+     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+     background: #fff;
+     overflow: hidden;
+     margin: 10px;
+ }
+ .card img{
+     width: 95%;
+     height: 65%;
+ }
+ .card .cardText{
+     background: #fff;
+     padding-left: 10px;
+     border-top: solid 2px #ebebeb;
+ }
+ .cardText .precio{
+     font-size: 18px;
+ }
+ .cardText .off{
+     font-size: 16px;
+     color: #39b54a;
+ }
+ .cardText .name{
+     font-size: 16px;
+     color: #666;
+     padding-top: 20px;
+ }
+
+
+ /* footer */
+.footer {
+    display: flex;
+    background-color: white;
+    flex-wrap: wrap;
+    
+  }
+ 
+  footer section p {
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+    padding: 0 32px 0 32px;
+  }
+
+  footer section h5 {
+    font-size: 25px;
+    font-weight: bolder;
+    align-items: center;
+    width: 100%;
+  }
+  
+  footer section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+ 
+  footer section .copy {
+   text-align: left;
+  
+  }
+
+ /*-------------- iconos ------------------ */
+ .cajitaAzul{
+    color: #1259c3;
+ }
+ .bx-search-alt-2{ /*lupa*/
+     font-size: 20px;
+ }
+ 
+ .cajaCamion{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 80%;
+    bottom: 20px;
+    border: solid 1px #39b54a;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border-width: 1px;
+    font-size: 25px;
+ }
+ .camionLogo{
+    color: #39b54a;
+ }
+ .camionLogo:hover{
+    animation: rotar linear 3s 1;
+    transition: 0.5s ease;
+ }
+ @keyframes rotar {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+ }
+ 
+ .bx-basket{
+     font-size: 20px;
+     padding-left: 5px;
+     align-items: center;
+ }
+ .bx-download{
+     font-size: 20px;
+     padding-left: 5px;
+ }
+ .bx-id-card{
+     font-size: 20px;
+     padding-left: 5px;
+ }
+
+ .ftr { /* footer */
+    width: 100%;
+    color: #1259c3;
+    font-size: 32px;
+    margin-top: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  footer section i:hover {
+    color: #0a3a82 ;
+  }
+
+
+
+
+
+
+/* Navegación en tablets (ancho mínimo 361 px)
+● Navegación en desktop (ancho mínimo 769 px) */
+/* un artículo si estamos en mobile, dos artículos para tablet y cuatro artículos
+para la versión desktop */
+/* Logo: tiene que medir el 50% de su contenedor.
+Barra de búsqueda: tiene que medir el 50% de su contenedor. */
+
+@media ((min-width:0px) and (max-width:360px)){
+   /* celular */
+   .ofertas{
+    display: block;
+   }
+   .card{
+    width: 100%;
+   }
+   header{
+    height: 180px;
+   }
+   .conte1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+   }
+   .conte1 button{
+    position: relative;
+    bottom: 40px;
+    left: 82%;
+   }
+   .cuotas{
+    font-size: 16px;
+    text-align: center;
+   }
+   .conte2{
+    display: none;
+   }
+   .cajitaAzul i{
+    display: flex;
+    position: relative;
+    top: 20px;
+    justify-content: center;
+    font-size: 50px;
+   }
+   .carrusel{
+    height: 200%;
+   }
+
+}
+
+@media ((min-width:361px) and (max-width:768px)){
+    /* tablet */
+    .ofertas{
+       display: grid;
+       grid-template-columns: 50% 50%;
+       
+    }
+    .card{
+        width: 300px;
+    }
+    .conte2{
+        display: none;
+    }
+ }
+  
+  
+@media ((min-width:769px)){
+    /* desktops */
+.cajitaAzul{
+    display: none;
+}
+ }
+
+
+
+
+ /* --------------------login--------------------- */
+
+
+
+ /* ----------------------register-------------------- */
+ .registro{
+    margin-bottom: 10px;
+ }
+.register input{
+    background-color: #fff;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+button{
+    width: 200px;
+    height: 30px;
+    color: #ffffff;
+    background: #1259c3;
+    border: none;
+    border-radius:10px ;
+    margin-bottom: 10px;
+
+}

@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercado Libre</title>
+    <title>Mercado Libre - Registro</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../public/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <header class="registro">
+    <header>
         <div> 
         <div class="conte1">
-            <img src="../public/images/logo.svg" alt="logo">
+            <a href="index.html"> <img src="../public/images/logo.svg" alt="logo"></a>
 
             <nav>
                 <form action="/" class="form"> 
@@ -20,51 +20,73 @@
                 <button type="submit"><i class="bx bx-search-alt-2" style='color:#080808'></i></button>
                 </form>
             </nav>
+            <a href="#" class="cuotas"> <i class='bx bx-dollar'></i> Compra en cuotras y sin tarjeta de credito</a>
         </div>
-        <p class="cuotas"> <i class='bx bx-dollar'></i> Compra en cuotras y sin tarjeta de credito</p>
+        
         <div class="conte2">
             <div> 
-            <a href="">Ofertas</a>
-            <a href="">Tiendas Oficiales</a>
-            <a href="">Vender</a>
-            <a href="">Ayuda</a>
+            <a href="#">Ofertas</a>
+            <a href="#">Tiendas Oficiales</a>
+            <a href="#">Vender</a>
+            <a href="#">Ayuda</a>
         </div>
         <div> 
-            <a href="" class="a">Mas Compras <i class='bx bx-basket'></i></a>
-            <a href="" class="a">Ingresa<i class='bx bx-download bx-rotate-270' ></i></box-icon></a>
+            <a href="#" class="a">Mas Compras<i class='bx bx-basket'></i></a>
+            <a href="login.html" class="a">Ingresa<i class='bx bx-download bx-rotate-270' ></i></box-icon></a>
             <a href="registro.html" class="a">Crea tu cuenta <i class='bx bx-id-card' ></i></a>
         </div>
     </div>
     <div class="cajitaAzul"><i class='bx bxs-detail'></i></div>
     </header>
 
+
     <main>
-        <form action="/" method="post" class="register">
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
-            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
-            <input type="email" name="email" id="email" placeholder="Email">
-            <h2> Fecha de nacimiento</h2>
-            <input type="date" name="fecha" id="fecha">
-            <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
-            <h2> Perfil del usuario</h2>
-            <input type="radio" name="comprador" id="comprador"> Comprador
-            <input type="radio" name="vendedor" id="vendedor"> Vendedor
-            <h2>Intereses</h2>
-            <input type="checkbox" name="electro" id="electro"> Electro
-            <input type="checkbox" name="moda" id="moda"> Moda
-            <input type="checkbox" name="hogar" id="hogar"> Hogar
-            <input type="checkbox" name="jugueteria" id="jugueteria"> jugueteria
-            <input type="checkbox" name="vidaSana" id="vidaSana"> Vida sana
-            <input> foto de usuario
-            <input type="password" name="password" id="password" placeholder="Contraseña">
-            <input type="password" name="password2" id="password2" placeholder="Confirmar contraseña">
-            <a href="index.html"><button type="submit">Enviar</button></a>
-            <button type="reset">Borrar</button>
+        <section class="register">  
+        <h1>Creá tu cuenta a continuación</h1>
+        <form action="/" method="post" >
+
+            <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required><br>
+            <input type="text" name="username" id="username" placeholder="Nombre de Usuario" required><br>
+            <input type="email" name="email" id="email" placeholder="correo@ejemplo.com" required><br>
+
+            <div>
+               <h3> <label for="birthday">Fecha de nacimiento</label></h3> <br>
+                <input type="date" name="birthday" id="birthday">
+            </div>
+
+            <input type="text" name="adress" id="adress" placeholder="Dirección 123"><br>
+            <h4>Perfil de Usuario</h4>
+
+            <div class="selec">
+                <label for="perfil"><input type="radio" name="perfil" value="comprador" id="comprador"> Comprador</label>
+                
+                <label for="perfil"><input type="radio" name="perfil" value="vendedor" id="vendedor"> Vendedor</label>
+            </div>
+
+            <h4>Intereses</h4>
+            <div class="selec">
+                <label for="interests"><input type="checkbox" name="interest1" id="electro" value="electro"> Electro</label>
+                <label for="interests"><input type="checkbox" name="interest2" id="moda" value="moda"> Moda</label>
+                <label for="interests"><input type="checkbox" name="interest3" id="home" value="home"> Hogar</label>
+                <label for="interests"><input type="checkbox" name="interest4" id="playstore" value="playstore"> Juguetería</label>
+                <label for="interests"><input type="checkbox" name="interest5" id="healthy" value="healthy"> Vida Sana</label>
+            </div>
+            <h4>Elegí tu foto de usuario</h4>
+            <div>
+                <input type="file" name="avatar" id="avatar"><br>
+                <input type="password" name="password" placeholder="Ingresá tu contraseña"><br>
+                <input type="password" name="repassword" placeholder="Vuelve a ingresar tu contraseña"><br>
+            </div>
+
            
+           <a href="index.html"> <input class="btn" type="submit" value="Enviar"></a><br>
+            <input class="btn" type="reset" value="Borrar datos"><br>
         </form>
+    </section>
     </main>
 
     <footer class="footer">
+        <section class="pagos"> 
         <section>
             <i class='bx bxs-credit-card ftr'></i>
             <h5> Pagá con tarjeta o en efectivo </h5>
@@ -88,8 +110,10 @@
                 porque estás siempre protegid@.
             </p>
         </section>
+        </section>
     
-        <section class="copyright">
+        
+        <section class="copy">
             <p> Copyright © 1999-2020 MercadoLiebre S.R.L. </p>
         </section>
     </footer>

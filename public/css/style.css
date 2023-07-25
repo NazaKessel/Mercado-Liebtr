@@ -16,6 +16,7 @@
  /* header */
  header{
      width: 100%;
+     max-width: 100%;
      height: 100px;
      background: rgb(255, 241, 89);
  }
@@ -50,6 +51,7 @@
  }
  header .cuotas{
     position: relative;
+    height: 20px;
     top: 15px;
     font-size: 16px;
 }
@@ -66,13 +68,12 @@
      text-decoration: none;
      color: rgba(0, 0, 0, 0.671);
      margin-left: 20px;
-     border: solid 1px red;
  }
  .conte2 .a{
+    
      text-decoration: none;
      color: rgba(0, 0, 0, 0.671);
-     margin-left: 20px;
-     float: right;
+     float:right;
      display: flex;
      text-align: center;
  }
@@ -152,9 +153,18 @@
      font-size: 16px;
      color: #39b54a;
  }
- .cardText .name{
+ .caja-name .name{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    box-sizing: border-box;
+    position: relative;
+    
     font-size: 16px;
     padding: 10px 0px;
+ }
+ .card .caja-name :hover{
+    opacity: 1;
  }
 
  /* footer */
@@ -220,19 +230,18 @@
  
  .bx-basket{
      font-size: 20px;
+     padding-right: 30px;
+     padding-left: 5px;
      display: flex;
      position: relative;
-     padding-left: 5px;
-     bottom: 5px;
+     top: -4px;
  }
  .bx-download{
      font-size: 20px;
      padding-left: 5px;
-    
  }
  .bx-id-card{
     font-size: 20px;
-    display: flex;
     position: relative;
     padding-left: 5px;
     bottom: 5px;
@@ -264,27 +273,44 @@ Barra de búsqueda: tiene que medir el 50% de su contenedor. */
 
 @media ((min-width:0px) and (max-width:480px)){
    /* celular */
+   header{
+    width: 480px;
+    height: 150px;
+    position: absolute;
+    overflow: hidden;
+}
    .ofertas{
     display: block;
    }
    .card{
-    width: 100%;
+    width: 90%;
    }
    header{
+    width: 100%;
     height: 180px;
+   }
+   .conte1 img{
+    width: 100%;
    }
    .conte1{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 30% 70%;
    }
+   header .conte1 input{
+    width: 200px;
+    max-width: 100%;
+}
    .conte1 button{
     position: relative;
-    bottom: 40px;
-    left: 90%;
+    left: -4px;
+    top: 4px;
    }
    .cuotas{
-    font-size: 16px;
+    width: 400px;
+    font-size: 13px;
+    position: relative;
     text-align: center;
+    top: 50px;
    }
    .conte2{
     display: none;
@@ -292,35 +318,34 @@ Barra de búsqueda: tiene que medir el 50% de su contenedor. */
    .cajitaAzul i{
     display: flex;
     position: relative;
-    top: 20px;
+    top: 60px;
     justify-content: center;
     font-size: 50px;
    }
    .carrusel{
+    padding-top: 180px;
     height: 200%;
    }
 
+    /* ---login y register--- */
+    .register{
+        position: relative;
+        top: 200px;
+        margin-bottom: 60%;
+    }
+
 }
 
-@media ((min-width:481px) and (max-width:768px)){
+@media ((min-width:481px) and (max-width:760px)){
     /* tablet */
-    .ofertas{
-       display: grid;
-       grid-template-columns: 50% 50%;
-       
+    header{
+        width: 800px;
+        height: 150px;
+        position: absolute;
+        overflow: hidden;
     }
-    .card{
-        width: 300px;
-    }
-    .conte2{
-        display: none;
-    }
- }
-
- @media ((min-width:769px) and (max-width:1279px)){
-    /* laptop */
     header .conte1{
-        width: 62%;
+        width: 100%;
         position: relative;
         display: flex;
         justify-content: center;
@@ -331,20 +356,93 @@ Barra de búsqueda: tiene que medir el 50% de su contenedor. */
     }
     header button{
         position: relative;
-        top: 4px;
-        left: -4px;
+        top: -40px;
+        left: 100%;
     }
     header .cuotas{
         display: flex;
         position: relative;
-        top: -25px;
-        left: 63%;
+        font-size: 13px;
+        left: 20px;
+        right: 20px;
+    }
+    header .conte2{
+        top: -5px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    .a{
+        padding-top: 15px;
+    }
+    .cajitaAzul{
+        display: none;
+    }
+
+    .carrusel{
+        padding-top: 150px;
+        height: 200%;
+    }
+    
+    .ofertas{
+       display: grid;
+       grid-template-columns: 50% 50%;
+       
+    }
+    .card{
+        width: 100%;
+        height: 100%;
+        border: solid 5px #ebebeb;
+    }
+    .cajaCamion{
+     width: 30px;
+     height: 30px;
+     font-size: 18px;
+    }
+
+ /* ---login y register--- */
+ .register{
+    position: relative;
+    top: 170px;
+    margin-bottom: 35%;
+}
+
+ }
+
+ @media ((min-width:761px) and (max-width:1279px)){
+    /* notebook */
+    header{
+        width: 1279px;
+        position: absolute;
+        overflow: hidden;
+    }
+    header .conte1{
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    header .conte1 input{
+        width: 100%;
+        max-width: 100%;
+    }
+    header button{
+        position: relative;
+        top: -40px;
+        left: 250px;
+    }
+    header .cuotas{
+        display: flex;
+        position: relative;
+        left: 30px;
         font-size: 14px;
         
     }
     header .conte2{
         display: grid;
-        top: 10px;
+        top: -5px;
         grid-template-columns: 40% 60%;
         justify-content: space-between;
     }
@@ -358,14 +456,27 @@ Barra de búsqueda: tiene que medir el 50% de su contenedor. */
 
     .carrusel{
         height: 200%;
-
+        padding-top: 100px;
     }
 
+    .cajaCamion{
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
 
     .pagos{
         display: flex;
         flex-direction: row;
     }
+
+    /* ---login y register--- */
+    .register{
+        position: relative;
+        top: 120px;
+        margin-bottom: 20%;
+    }
+    
 }
 @media ((min-width:1280px)){
     /* desktops */
@@ -374,14 +485,7 @@ header button{
     top: 4px;
     left: -4px;
 }
-header .conte1{
-    position: absolute;
-    right: 100px;
-}
-header .conte2{
-    position: absolute;
-    top: 80px;
-}
+
 .cajitaAzul{
     display: none;
 }
@@ -397,31 +501,57 @@ header .conte2{
 }
  }
 
-
-
-
- /* --------------------login--------------------- */
-
-
-
- /* ----------------------register-------------------- */
- .registro{
-    margin-bottom: 10px;
- }
-.register input{
-    background-color: #fff;
-    width: 300px;
-    height: 30px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+ /* ----------------------login y register-------------------- */
+ .register {
+    border: solid 1px rgba(89, 155, 255, 0.144) ;
+    border-radius: 20px;
+    background: rgba(92, 127, 179, 0.144);
+    text-align: center;
+    margin-top: 30px;
+  }
+.register h1 {
+  margin: 15px 0;
 }
-button{
-    width: 200px;
-    height: 30px;
-    color: #ffffff;
-    background: #1259c3;
-    border: none;
-    border-radius:10px ;
-    margin-bottom: 10px;
+.register form .selec {
+  align-self: center;
+  text-align: center;
+  width: 20%;
+  margin-left: 35%;
+}
+.register form {
+  width: 60%;
+  margin: auto;
+}
+.register form .intereses {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.register form .btn {
+  background-color: #1259c3;
+  color: white;
+  width: 63%;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+.register form .btn:hover {
+  background-color: #03264C;
+}
+.register form h4 {
+  margin-bottom: 1rem;
+  font-size: 16px;
+  text-align: center;
+}
+.register form input {
+  margin-bottom: 2rem;
+  border: none;
+  padding: 0.8rem;
+  width: 60%;
+  text-align: left;
+}
 
+.register form input {
+  border-radius: 5px;
 }
